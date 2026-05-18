@@ -16,6 +16,7 @@
     }
     nav {
       display: flex;
+      justify-content: center;
       gap: 2rem;
       padding: 1rem 2rem;
       border-bottom: 1px solid #333;
@@ -25,7 +26,10 @@
       text-decoration: none;
       font-size: 0.95rem;
       letter-spacing: 0.05em;
+      padding: 0 1rem;
+      border-right: 1px solid #555;
     }
+    nav a:last-child { border-right: none; }
     nav a:hover { text-decoration: underline; }
     nav a.active { border-bottom: 1px solid #fff; }
     main {
@@ -43,10 +47,10 @@
 </head>
 <body>
   <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="great-gatsby.html">Great Gatsby</a>
+    <a href="great-gatsby.html">The Great Gatsby</a>
     <a href="the-tempest.html">The Tempest</a>
-    <a href="modest-proposal.html">Modest Proposal</a>
+    <a href="index.html" class="active">Home</a>
+    <a href="modest-proposal.html">A Modest Proposal</a>
     <a href="the-runner.html">The Runner</a>
   </nav>
   <main>
