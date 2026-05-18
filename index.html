@@ -16,20 +16,23 @@
     }
     nav {
       display: flex;
-      justify-content: center;
-      gap: 2rem;
+      align-items: center;
       padding: 1rem 2rem;
       border-bottom: 1px solid #333;
     }
+    nav .nav-left, nav .nav-right {
+      flex: 1;
+      display: flex;
+      gap: 2rem;
+    }
+    nav .nav-right { justify-content: flex-end; }
+    nav .nav-center { flex-shrink: 0; }
     nav a {
       color: #ffffff;
       text-decoration: none;
       font-size: 0.95rem;
       letter-spacing: 0.05em;
-      padding: 0 1rem;
-      border-right: 1px solid #555;
     }
-    nav a:last-child { border-right: none; }
     nav a:hover { text-decoration: underline; }
     nav a.active { border-bottom: 1px solid #fff; }
     main {
@@ -47,11 +50,17 @@
 </head>
 <body>
   <nav>
-    <a href="great-gatsby.html">The Great Gatsby</a>
-    <a href="the-tempest.html">The Tempest</a>
-    <a href="index.html" class="active">Home</a>
-    <a href="modest-proposal.html">A Modest Proposal</a>
-    <a href="the-runner.html">The Runner</a>
+    <div class="nav-left">
+      <a href="great-gatsby.html">The Great Gatsby</a>
+      <a href="the-tempest.html">The Tempest</a>
+    </div>
+    <div class="nav-center">
+      <a href="index.html" class="active">Home</a>
+    </div>
+    <div class="nav-right">
+      <a href="modest-proposal.html">A Modest Proposal</a>
+      <a href="the-runner.html">The Runner</a>
+    </div>
   </nav>
   <main>
     <pre>
