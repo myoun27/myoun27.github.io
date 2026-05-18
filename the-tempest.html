@@ -15,26 +15,31 @@
       flex-direction: column;
     }
     nav {
+      position: relative;
       display: flex;
+      justify-content: center;
       align-items: center;
       padding: 1rem 2rem;
       border-bottom: 1px solid #333;
     }
-    nav .nav-left, nav .nav-right {
-      flex: 1;
-      display: flex;
-      gap: 2rem;
+    .nav-info {
+      position: absolute;
+      right: 2rem;
+      text-align: right;
+      font-size: 0.8rem;
+      line-height: 1.4;
     }
-    nav .nav-right { justify-content: flex-end; }
-    nav .nav-center { flex-shrink: 0; }
     nav a {
       color: #ffffff;
       text-decoration: none;
       font-size: 0.95rem;
       letter-spacing: 0.05em;
+      padding: 0 1.2rem;
+      border-right: 1px solid #555;
     }
+    nav a:last-child { border-right: none; }
     nav a:hover { text-decoration: underline; }
-    nav a.active { border-bottom: 1px solid #fff; }
+    nav a.active { font-weight: bold; }
     main {
       flex: 1;
       display: flex;
@@ -45,17 +50,12 @@
 </head>
 <body>
   <nav>
-    <div class="nav-left">
-      <a href="great-gatsby.html">The Great Gatsby</a>
-      <a href="the-tempest.html" class="active">The Tempest</a>
-    </div>
-    <div class="nav-center">
-      <a href="index.html">Home</a>
-    </div>
-    <div class="nav-right">
-      <a href="modest-proposal.html">A Modest Proposal</a>
-      <a href="the-runner.html">The Runner</a>
-    </div>
+    <a href="great-gatsby.html">The Great Gatsby</a>
+    <a href="the-tempest.html" class="active">The Tempest</a>
+    <a href="index.html">Home</a>
+    <a href="modest-proposal.html">A Modest Proposal</a>
+    <a href="the-runner.html">The Runner</a>
+    <div class="nav-info">Minjae Youn<br>Humanities 3</div>
   </nav>
   <main>
     <p>placeholder text</p>
