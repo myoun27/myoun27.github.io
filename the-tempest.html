@@ -47,9 +47,28 @@
     }
     main {
       flex: 1;
+      overflow-x: auto;
+      padding: 2rem 0;
+    }
+    .lightning {
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      padding: 6rem 0;
+    }
+    .scene-wrapper {
+      position: relative;
+      overflow-x: auto;
+    }
+    .art-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
       justify-content: center;
+      align-items: center;
+      pointer-events: none;
     }
   </style>
 </head>
@@ -63,19 +82,19 @@
     <div class="nav-info">Minjae Youn<br>Humanities 3</div>
   </nav>
   <main>
-    <pre class = "ascii-art">
-TEMPESTTEMPESTTEMP
+    <div class="scene-wrapper">
+      <div class="lightning">
+        <pre class="ascii-art" style="margin-left:95ch">TEMPESTTEMPESTTEMP
 PESTTEMPESTTEMPEST
        TTEM
        PEST
-       TEMP           
-       ESTT  
-       EMPE 
+       TEMP
+       ESTT
+       EMPE
        STTE
        MPES
-       TEMP           
-
-TEMPESTTEMPESTTEMP
+       TEMP           </pre>
+        <pre class="ascii-art" style="margin-left:100ch">TEMPESTTEMPESTTEMP
 ESTTEMPESTTEMPESTT
 TEMP
 ESTT
@@ -84,9 +103,8 @@ STTEMPESTTEMPESTTE
 MPES
 TTEM
 PESTTEMPESTTEMPEST
-TEMPESTTEMPESTTEMP
-
-TEM            PES
+TEMPESTTEMPESTTEMP</pre>
+        <pre class="ascii-art" style="margin-left:105ch">TEM            PES
 TTEM          PEST
 TEMPE        TESTT
 TE MPE      TES TT
@@ -95,9 +113,8 @@ MP   EST  STT   EM
 PE    STTEMP    MP
 ES     TTEM     ES
 TT      EM      PE
-ST              MP
-
-TEMPESTTEMPESTTEMP
+ST              MP</pre>
+        <pre class="ascii-art" style="margin-left:80ch">TEMPESTTEMPESTTEMP
 ESTTEMPESTTEMPESTT
 TEMP          ESTT
 EMPE          STTE
@@ -106,9 +123,8 @@ TEMPESTTEMPESTTEMP
 ESTT
 EMPE
 STTE
-MPES
- 
-TEMPESTTEMPESTTEMP
+MPES</pre>
+        <pre class="ascii-art" style="margin-left:85ch">TEMPESTTEMPESTTEMP
 ESTTEMPESTTEMPESTT
 TEMP
 ESTT
@@ -117,9 +133,8 @@ STTEMPESTTEMPESTTE
 MPES
 TTEM
 PESTTEMPESTTEMPEST
-TEMPESTTEMPESTTEMP
-
-TEMPESTTEMPESTTEMP
+TEMPESTTEMPESTTEMP</pre>
+        <pre class="ascii-art" style="margin-left:90ch">TEMPESTTEMPESTTEMP
 ESTTEMPESTTEMPESTT
 EMPE
 STTE
@@ -128,19 +143,57 @@ ESTTEMPESTTEMPESTT
               TEMP
               ESTT
 EMPESTTEMPESTTEMPE
-STTEMPESTTEMPESTTE 
-
-TEMPESTTEMPESTTEMP
+STTEMPESTTEMPESTTE</pre>
+        <pre class="ascii-art" style="margin-left:95ch">TEMPESTTEMPESTTEMP
 PESTTEMPESTTEMPEST
        TTEM
        PEST
-       TEMP           
-       ESTT  
-       EMPE 
+       TEMP
+       ESTT
+       EMPE
        STTE
        MPES
-       TEMP     
-    </pre>
+       TEMP     </pre>
+      </div>
+      <div class="art-overlay">
+        <pre class="ascii-art">                                                                                                  *###
+                                                                                                                                     %%%%%@@@@%##
+                                                                                                                                   ****%%%@@@@@@%++
+                                                                                                                                   ::==+#@@@@@@@@%*+
+                   .      ..                                                                                                        ::=+*#%@@@@@@@#*
+                   ....   .                                                                                                       ...=*###%%@@@@@@#*
+                   :-++++=-.... .                                                                                                 ::-*#####%@@@@@@#.
+                   -*###*=-+=.. ..    .                                                                                           ==****###%@@@@@@%:
+                  .+####*=+=-==-.    .#@%*=                                                                                       @#.=*##%@@@@@@@@%+= =##%###*#
+             .   :-*+*#*+*+=+*=--.   #@@*@*:                                                                                       #%%%@@@@@@@@@@@@%%@@@@%%%%%%%#+*%##*=*
+          -::...:++=++********+*+: .@@@@@#=*=                                                                                      %@@@@@@@@@@@@@@@@@@@@@%%%%%@@@@@@%#*+++*+
+              .:-==*+**##*+****#*:.%@@@%##                                                                                         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#+....
+             .:..+#+**#########*=-=-@@#*%+-:                                                                                          @@  ###%@@@@@@@@@@@@@@@@@@@@@@@@@@%%#.--:.
+              ..-+##*****#%%%##*: -*.+##*-.+=.                                                                                           #*#**#@@@@@@@@@@@@@@@@@@@@@@@@@@@%#-###=.
+              -=+++*###*#%######*-=%@#=*#=.::+                                                                                          #**#*+=+@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%@@%+:.
+              #***+#%##%%######*==*@@%%#%#+-                                                                                            %%%%#+-=#@@%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#:
+           #*=##@%##**#%%%%%%%%#*=*@@%##%##-                         %#                                                                 %@@@%++#@@@%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#-.
+       ++#*%*%##@@%#**#%%%%@@@@@%*#%#%##%%%%                   @@@@@@@@                                                                 @@@@%##@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#.
++++*##%#%%%%%%%%@@@#####%#@@@@@@@%%%=..  .:..:             @%@@@@@@                                                                     @@@@@%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%+
+@@@@@@@@@%%%%%%@@@@%%#+###%@@@@@@@%@%=-- .=.=+:        @@@@#@@@                                                                          @@@@%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+
+@@@@@@@@@@@@%%%@%%%%%#+*=*#@@@@@@@@@@%++*:.=***-  @@@%@@@@                                                                               @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+   @@@@@@@@@@@@%=.
+@@@@@@@@@@@@%@@@%######**#%@@@@@@@@@@%*=+===-:*##@@@@@                                                                                   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#.        @@@@@@@@@%-
+@@@@@@@@@@@@@@@@@@%######@@%@@@@@@@@@@@#*++=+*=@%*                                                                                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%=          @@@@@@@@@+
+*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+*###@%=:                                                                                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%# .%%+     @@@@@@@@@%+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#-*#@@@=:                                                                                        #%@@@@#**@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*     @@@@@@@@@#+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#=.                                                                                        **%%*-=- #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#+     @@@@@@@@@#
+@@@@@@@@@@@@@@@@@@@@%@@@@@@@@@@@@@@@@@@@@@@@@@##*.                                                                                       @@@%%#+##%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@++       @@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###.                                                                                      %@@@@@@@@  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@%           @@@@@@
+@@@@@@%*+:**++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#**.                                                                                      @@@@@@@     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@         @@@@@
+@@@%######*#%**@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:                                                                                           @@@@@@@     %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@           @@@@
+@@%+*####*%%@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=......                                                                                       @@@@@@    %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*            @@
+@@@@@@@%%@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#*#%%%#                                                                                                @%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%=
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=:.                                                                                                    ##%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%+-.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%*-.                                                                                                      ##%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%-:
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%*+:.                                                                                                     ##%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%+:
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%#*-:.                                                                                                    ###%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%=-:   </pre>
+      </div>
+    </div>
   </main>
 </body>
 </html>
