@@ -14,6 +14,7 @@
       display: flex;
       flex-direction: column;
     }
+
     nav {
       position: relative;
       display: flex;
@@ -40,16 +41,44 @@
     nav a:last-child { border-right: none; }
     nav a:hover { text-decoration: underline; }
     nav a.active { font-weight: bold; }
-    main {
-      flex: 1;
+
+    main { flex: 1; }
+
+    .section {
       display: flex;
       align-items: center;
-      justify-content: center;
+      padding: 3rem 5%;
+      gap: 4%;
+      border-bottom: 1px solid #333;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.2s;
     }
-    pre {
-      white-space: pre;
-      line-height: 1.2;
-      font-size: clamp(0.5rem, 1.5vw, 1rem);
+    .section:hover { background: #0a0a0a; }
+    .section:hover .section-title { text-decoration: underline; }
+
+    .section.reverse { flex-direction: row-reverse; }
+
+    .section-image {
+      flex: 0 0 30%;
+      aspect-ratio: 4 / 3;
+      border: 1px solid #444;
+      background: #111;
+    }
+
+    .section-text {
+      flex: 1;
+    }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 1.6rem);
+      letter-spacing: 0.08em;
+      margin-bottom: 10rem;
+      font-weight: bold;
+    }
+    .section-body {
+      font-size: clamp(0.75rem, 1.4vw, 0.95rem);
+      line-height: 1.7;
+      color: #bbb;
     }
   </style>
 </head>
@@ -62,8 +91,31 @@
     <a href="the-runner.html">The Runner</a>
     <div class="nav-info">Minjae Youn<br>Humanities 3</div>
   </nav>
+
   <main>
-    <p>placeholder text</p>
+    <a href="great-gatsby.html" class="section" style="text-align: right;">
+      <div class="section-text">
+        <div class="section-title">The Great Gatsby</div>
+      </div>
+    </a>
+
+    <a href="the-tempest.html" class="section reverse">
+      <div class="section-text">
+        <div class="section-title">The Tempest</div>
+      </div>
+    </a>
+
+    <a href="modest-proposal.html" class="section" style="text-align: right">
+      <div class="section-text">
+        <div class="section-title">A Modest Proposal</div>
+      </div>
+    </a>
+
+    <a href="the-runner.html" class="section reverse">
+      <div class="section-text">
+        <div class="section-title">The Runner</div>
+      </div>
+    </a>
   </main>
 </body>
 </html>
